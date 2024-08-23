@@ -19,6 +19,14 @@ namespace Library.Domain.Entities.Users
         public string Email { get; set; }
         public string FullName => $"{LastName} {FirstName} {Patronymic ?? ""}";
 
+        public UserBase(string email, string firstName, string lastName, string? patronymic=null): this()
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Patronymic = patronymic;
+            Email = email;
+        }
+
         public UserBase() { }
 
         public override string ToString() => FullName;

@@ -12,12 +12,38 @@ namespace Library.Domain.Entities.Users
     /// </summary>
     public class Stuff: UserBase
     {
-        private string hashPassword = string.Empty;
+        private string hashPassword;
+       
         public bool IsAdmin {  get; set; } = true;
-        public string HashPassword 
+        public string Password 
         {  
             get => hashPassword;
             set => hashPassword = PasswordHasher.HashPassword(value);
+        }
+
+        public Stuff(string email, string password, string firstName, string lastName,
+            string? patronymic = null, bool isAdmin = true): base(email, firstName, lastName, patronymic)
+        {
+            Password = password;
+            IsAdmin = isAdmin;
+        }
+
+        public override string ToString()
+        {
+            string info = base.ToString() + ". Администратор: ";
+            if (IsAdmin) info += "Да";
+            else info += "Нет";
+            return info;
+        }
+
+        /// <summary>
+        /// Проверяет пароль.
+        /// </summary>
+        /// <param name="password">Не зашифрованый пароль</param>
+        /// <returns></returns>
+        public bool VerifyPassword(string password)
+        {
+            return PasswordHasher.VerifyPassword(password, Password);
         }
     }
 }
