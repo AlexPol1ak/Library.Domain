@@ -21,12 +21,11 @@ namespace Library.Domain.Entities.Books
 
         public ICollection<Book> Books { get; set; } = new List<Book>();
 
-        public Author(string firstName, string lastName, string? patronymic, ICollection<Book> books): this()
+        public Author(string firstName, string lastName, string? patronymic): this()
         {
             FirstName = firstName;
             LastName = lastName;
             Patronymic = patronymic;
-            Books = books;
         }
 
         public Author() { }
