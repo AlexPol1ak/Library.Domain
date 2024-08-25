@@ -12,15 +12,15 @@ namespace Library.Domain.Interfaces
 {
     public interface IUnitOfWork
     {
-        IRepository<User> UserRepository { get; }
+        IRepository<User> UsersRepository { get; }
         IRepository<Stuff> StuffRepository { get; }
         IRepository<Request> RequestsRepository { get; }
-        IRepository<Author> AuthorRepository { get; }
-        IRepository<Book> BookRepository { get; }
-        IRepository<BookHistory> BookHistoryRepository { get; }
-        IRepository<Genre> GenreRepository { get; }
-        IRepository<Rack> RackRepository { get; }
-        IRepository<Term> TermRepository { get; }
+        IRepository<Author> AuthorsRepository { get; }
+        IRepository<Book> BooksRepository { get; }
+        IRepository<BookHistory> BookHistoriesRepository { get; }
+        IRepository<Genre> GenresRepository { get; }
+        IRepository<Rack> RacksRepository { get; }
+        IRepository<Term> TermsRepository { get; }
 
         void SaveChanges();
 
