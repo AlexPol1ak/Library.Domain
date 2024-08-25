@@ -9,7 +9,7 @@ namespace Library.Domain.Interfaces
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        IQueryable<TEntity> GetAll();
+        IQueryable<TEntity> GetAll(params string[] includes);
         TEntity Get(int id, params string[] includes);
         IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
         void Create(TEntity entity);
