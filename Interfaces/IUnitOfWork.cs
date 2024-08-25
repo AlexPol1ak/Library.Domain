@@ -14,7 +14,7 @@ namespace Library.Domain.Interfaces
     {
         IRepository<User> UserRepository { get; }
         IRepository<Stuff> StuffRepository { get; }
-        IRepository<Request> PhotosRepository { get; }
+        IRepository<Request> RequestsRepository { get; }
         IRepository<Author> AuthorRepository { get; }
         IRepository<Book> BookRepository { get; }
         IRepository<BookHistory> BookHistoryRepository { get; }
