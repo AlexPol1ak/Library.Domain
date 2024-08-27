@@ -14,6 +14,7 @@ namespace Library.Domain.Entities.Books
         public int BookId { get; set; }
         public string Name { get; set; }
         public int NumberPages {  get; set; }
+        public int PublicationDate {  get; set; }
         public string? Description { get; set; }
 
         // Жанр
