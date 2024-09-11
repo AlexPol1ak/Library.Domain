@@ -36,11 +36,12 @@ namespace Library.Domain.Entities.Books
 
         public Book() { }
 
-        public Book(string name, int numberPages, string? description = null):this()
+        public Book(string name, int numberPages, int publicationDate , string? description = null):this()
         {
             Name = name;
             NumberPages = numberPages;
             Description = description;
+            PublicationDate = publicationDate;
         }
 
         public override string ToString()

@@ -14,7 +14,7 @@ namespace Library.Domain.Entities.Books
         public int GenreId { get; set; }
         public string Name { get; set; }
 
-        public ICollection<Book> books { get; set; } = new List<Book>();
+        public ICollection<Book> Books { get; set; } = new List<Book>();
 
         public Genre() { }
 
