@@ -16,8 +16,10 @@ namespace Library.Domain.Entities.Books
         public string LastName { get; set; }
         public string? Patronymic { get; set; }
         public string FullName => $"{LastName} {FirstName} {Patronymic ?? ""}";
-        public string ShortName => $"{LastName} {FirstName.First()}. " +
-            $"{(Patronymic != null? Patronymic.First()+'.': "")}";
+        public string ShortName =>
+                $"{(string.IsNullOrEmpty(LastName) ? "" : LastName)} " +
+                $"{(string.IsNullOrEmpty(FirstName) ? "" : FirstName.First() + ". ")}" +
+                $"{(string.IsNullOrEmpty(Patronymic) ? "" : Patronymic.First() + ".")}";
 
         public ICollection<Book> Books { get; set; } = new List<Book>();
 

@@ -16,6 +16,21 @@ namespace Library.Domain.Entities.Books
         public int NumberPages {  get; set; }
         public int PublicationDate {  get; set; }
         public string? Description { get; set; }
+        public string AuthorsShort
+        {
+            get
+            {
+                string authorsShort = string.Empty;
+                if(Authors.Count> 0)
+                {
+                    foreach (var author in Authors)
+                    {
+                        authorsShort += author.ShortName + " ";
+                    }
+                }
+                return authorsShort;
+            }
+        }
 
         // Жанр
         public int GenreID { get; set; }
