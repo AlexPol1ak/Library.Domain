@@ -18,6 +18,10 @@ namespace Library.Domain.Entities.Users
         public string? Patronymic { get; set; }
         public string Email { get; set; }
         public string FullName => $"{LastName} {FirstName} {Patronymic ?? ""}";
+        public string ShortName =>
+                $"{(string.IsNullOrEmpty(LastName) ? "" : LastName)} " +
+                $"{(string.IsNullOrEmpty(FirstName) ? "" : FirstName.First() + ". ")}" +
+                $"{(string.IsNullOrEmpty(Patronymic) ? "" : Patronymic.First() + ".")}";
 
         public UserBase(string email, string firstName, string lastName, string? patronymic=null): this()
         {
