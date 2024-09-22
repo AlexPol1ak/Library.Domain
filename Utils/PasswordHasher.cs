@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Library.Domain.Utils
 {
+    /// <summary>
+    /// Класс генерации и валидации паролей.
+    /// </summary>
     public static class PasswordHasher
     {
         /// <summary>
