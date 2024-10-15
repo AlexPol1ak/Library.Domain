@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Library.Domain.Entities.Users
 {
     /// <summary>
-    /// Клас запросов выдачи книги.
+    /// Класс запросов выдачи книги.
     /// </summary>
     public class Request
     {

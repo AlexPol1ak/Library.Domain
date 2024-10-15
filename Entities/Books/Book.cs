@@ -35,7 +35,7 @@ namespace Library.Domain.Entities.Books
         // Жанр
         public int GenreID { get; set; }
         public Genre Genre { get; set; }
-        //Стелаж
+        //Стеллаж
         public int? RackId { get; set; }
         public Rack? Rack { get; set; }
 
@@ -43,7 +43,7 @@ namespace Library.Domain.Entities.Books
         public int TermId {  get; set; }
         public Term Term { get; set; }
 
-        // Истории выдач
+        // Истории выдач книг
         public ICollection<BookHistory> BookHistory { get; set; }=new List<BookHistory>();
 
         // Авторы

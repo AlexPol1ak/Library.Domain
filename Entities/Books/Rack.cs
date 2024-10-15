@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Library.Domain.Entities.Books
 {
+    /// <summary>
+    /// Класс жанра
+    /// </summary>
     public class Rack
     {
         public int RackId { get; set; }

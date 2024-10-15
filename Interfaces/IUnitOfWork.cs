@@ -10,6 +10,9 @@ using System.Windows.Input;
 
 namespace Library.Domain.Interfaces
 {
+    /// <summary>
+    /// Интерфейс единицы работы.
+    /// </summary>
     public interface IUnitOfWork
     {
         IRepository<User> UsersRepository { get; }
