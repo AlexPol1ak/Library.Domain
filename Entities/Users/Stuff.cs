@@ -23,13 +23,20 @@ namespace Library.Domain.Entities.Users
             get => hashPassword;
             set
             {
-                hashPassword = PasswordHasher.HashPassword(value);
+                if (!value.Contains(":"))
+                {
+                    hashPassword = PasswordHasher.HashPassword(value);
+                }
+                else
+                {
+                    hashPassword = value;
+                }
             }
         }
-        public Stuff(string email, string Password, string firstName, string lastName,
-            string? patronymic = null, bool isAdmin = true): base(email, firstName, lastName, patronymic)
+        public Stuff(string email, string Password, string firstName, string lastName, string? patronymic = null, bool isAdmin = true)
+        : base(email, firstName, lastName, patronymic)
         {
-            this.Password = Password;
+            this.Password = Password; 
             IsAdmin = isAdmin;
         }
 
