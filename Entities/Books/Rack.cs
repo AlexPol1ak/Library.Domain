@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Library.Domain.Entities.Books
+﻿namespace Library.Domain.Entities.Books
 {
     /// <summary>
     /// Класс жанра
@@ -15,7 +9,7 @@ namespace Library.Domain.Entities.Books
         public string Name { get; set; }
 
         public ICollection<Book> Books { get; set; } = new List<Book>();
-        
+
         public Rack() { }
 
         public Rack(string name)
@@ -24,6 +18,6 @@ namespace Library.Domain.Entities.Books
         }
 
         public override string ToString() => Name;
-        
+
     }
 }

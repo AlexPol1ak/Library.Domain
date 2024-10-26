@@ -1,9 +1,4 @@
 ﻿using Library.Domain.Entities.Books;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Library.Domain.Entities.Users
 {
@@ -12,7 +7,7 @@ namespace Library.Domain.Entities.Users
     /// </summary>
     public class Request
     {
-        public int RequestId {  get; set; }
+        public int RequestId { get; set; }
         public DateTime DateCreated { get; set; } = DateTime.Now;
         public DateTime? IssueDate { get; set; }
 
@@ -23,7 +18,7 @@ namespace Library.Domain.Entities.Users
         public int BookId { get; set; }
         public Book Book { get; set; }
 
-        public Request( User user, Book book, DateTime dateCreated, DateTime? issueDate = null): this()
+        public Request(User user, Book book, DateTime dateCreated, DateTime? issueDate = null) : this()
         {
             DateCreated = dateCreated;
             IssueDate = issueDate;

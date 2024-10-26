@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Library.Domain.Interfaces
+﻿namespace Library.Domain.Interfaces
 {
     /// <summary>
     /// Интерфейс базового пользователя

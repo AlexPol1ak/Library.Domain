@@ -1,12 +1,6 @@
 ﻿using Library.Domain.Entities.Books;
 using Library.Domain.Entities.Users;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace Library.Domain.Interfaces
 {

@@ -1,24 +1,19 @@
 ﻿using Library.Domain.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Library.Domain.Entities.Users
 {
     /// <summary>
     /// Класс сотрудника.
     /// </summary>
-    public class Stuff: UserBase
-    {      
-        public bool IsAdmin {  get; set; } = true;
+    public class Stuff : UserBase
+    {
+        public bool IsAdmin { get; set; } = true;
 
         private string hashPassword;
         /// <summary>
         /// Содержит хеш пароля. При установке пароля хеш вычисляется и записывается автоматически.
         /// </summary>
-        public string Password 
+        public string Password
         {
             get => hashPassword;
             set
@@ -36,7 +31,7 @@ namespace Library.Domain.Entities.Users
         public Stuff(string email, string Password, string firstName, string lastName, string? patronymic = null, bool isAdmin = true)
         : base(email, firstName, lastName, patronymic)
         {
-            this.Password = Password; 
+            this.Password = Password;
             IsAdmin = isAdmin;
         }
 

@@ -1,9 +1,4 @@
 ﻿using Library.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Library.Domain.Entities.Users
 {
@@ -23,7 +18,7 @@ namespace Library.Domain.Entities.Users
                 $"{(string.IsNullOrEmpty(FirstName) ? "" : FirstName.First() + ". ")}" +
                 $"{(string.IsNullOrEmpty(Patronymic) ? "" : Patronymic.First() + ".")}";
 
-        public UserBase(string email, string firstName, string lastName, string? patronymic=null): this()
+        public UserBase(string email, string firstName, string lastName, string? patronymic = null) : this()
         {
             FirstName = firstName;
             LastName = lastName;
